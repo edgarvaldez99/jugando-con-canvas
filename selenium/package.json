@@ -1,0 +1,22 @@
+{
+  "name": "pruebas-selenium",
+  "version": "1.0.0",
+  "description": "Pruebas hechas con selenium",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/edgarvaldez99/pruebas-de-tecnologias.git"
+  },
+  "author": "evaldez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://gitlab.com/edgarvaldez99/pruebas-de-tecnologias/issues"
+  },
+  "homepage": "https://gitlab.com/edgarvaldez99/pruebas-de-tecnologias#README",
+  "dependencies": {
+    "selenium-webdriver": "^3.6.0"
+  }
+}
