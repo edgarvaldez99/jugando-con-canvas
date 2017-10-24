@@ -1,5 +1,13 @@
 {
     "username": "emvaldez",
     "password": "Fielco-102017",
-    "titleProyect": "marcaciones"
+    "titleProyect": "marcaciones",
+    "petition": {
+        "trackId": "36",
+        "subject": "",
+        "description": "",
+        "statusId": "1",
+        "assignedToId": "",
+        "attachments": ""
+    }
 }
