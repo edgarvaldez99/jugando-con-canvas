@@ -1,7 +1,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver');
 const { username, password, titleProyect, petition } = require('./conf');
 const moment = require("moment");
-const selectors = require("selectors");
+const selectors = require("./selectors.json");
 
 let driver = new Builder()
     .forBrowser('firefox')
@@ -36,8 +36,8 @@ const createBy = By[selectors.create.by](selectors.create.it);
 const createEl = driver.findElement(createBy);
 driver.wait(until.elementLocated(createBy));
 driver.wait(until.elementIsVisible(createEl));
-driver.findElement(By[selectors.trackId.by](selectors.trackId.it)).findElement(By.css(`[value="${petition.trackId}"]`)).click();
-driver.findElement(By[selectors.subject.by](selectors.subject.it)).sendKeys(petition.subject);
+driver.findElement(By[selectors.trackerId.by](selectors.trackerId.it)).findElement(By.css(`[value="${petition.trackerId}"]`)).click();
+driver.findElement(By[selectors.subject.by](selectors.subject.it)).sendKeys(petition.subject.replace("{{date}}", moment().format("DD-MM-YYYY")));
 driver.findElement(By[selectors.description.by](selectors.description.it)).sendKeys(petition.description);
 driver.findElement(By[selectors.statusId.by](selectors.statusId.it)).findElement(By.css(`[value="${petition.statusId}"]`)).click();
 driver.findElement(By[selectors.assignedToId.by](selectors.assignedToId.it)).findElement(By.css(`[value="${petition.assignedToId}"]`)).click();

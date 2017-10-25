@@ -1,0 +1,9 @@
+{
+    "trackerId":    { "by": "id", "it": "issue_tracker_id" },
+    "subject":      { "by": "id", "it": "issue_subject" },
+    "description":  { "by": "id", "it": "issue_description" },
+    "statusId":     { "by": "id", "it": "issue_status_id" },
+    "assignedToId": { "by": "id", "it": "issue_assigned_to_id" },
+    "attachments":  { "by": "class", "it": "file_selector" },
+    "create":       { "by": "name", "it": "commit" }
+}

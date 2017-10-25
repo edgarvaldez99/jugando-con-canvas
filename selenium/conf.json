@@ -3,9 +3,9 @@
     "password": "Fielco-102017",
     "titleProyect": "marcaciones",
     "petition": {
-        "trackId": "36",
-        "subject": "",
-        "description": "",
+        "trackerId": "36",
+        "subject": "Marcación del día {{date}}",
+        "description": "asdfas",
         "statusId": "1",
         "assignedToId": "",
         "attachments": ""
