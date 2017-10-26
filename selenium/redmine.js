@@ -40,5 +40,10 @@ driver.findElement(By[selectors.trackerId.by](selectors.trackerId.it)).findEleme
 driver.findElement(By[selectors.subject.by](selectors.subject.it)).sendKeys(petition.subject.replace("{{date}}", moment().format("DD-MM-YYYY")));
 driver.findElement(By[selectors.description.by](selectors.description.it)).sendKeys(petition.description);
 driver.findElement(By[selectors.statusId.by](selectors.statusId.it)).findElement(By.css(`[value="${petition.statusId}"]`)).click();
-driver.findElement(By[selectors.assignedToId.by](selectors.assignedToId.it)).findElement(By.css(`[value="${petition.assignedToId}"]`)).click();
-createEl.click();
+if (petition.assignedToId) {
+    driver.findElement(By[selectors.assignedToId.by](selectors.assignedToId.it)).findElement(By.css(`[value="${petition.assignedToId}"]`)).click();
+} else {
+    driver.findElement(By[selectors.assignedToId.by](selectors.assignedToId.it)).click();
+    driver.findElement(By.xpath("//*[contains(text(), '<< yo mismo >>')]")).click();
+}
+//createEl.click();
